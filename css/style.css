@@ -81,3 +81,29 @@ footer {
 	padding: 2rem 0;
 	font-size: 0.9rem;
 }
+
+.form-label {
+	color: var(--ramsua-charcoal);
+}
+
+.btn-primary {
+	background-color: var(--ramsua-orange);
+	border-color: var(--ramsua-orange);
+}
+
+.btn-primary:hover {
+	background-color: #e65c00;
+	border-color: var(--ramsua-orange);
+}
+
+.btn-outline-primary {
+	background-color: transparent;
+	color: var(--ramsua-orange);
+	border-color: var(--ramsua-orange);
+}
+
+.btn-outline-primary:hover {
+	background-color: rgba(255, 102, 0, 0.1);
+	color: var(--ramsua-orange);
+	border-color: var(--ramsua-orange);
+}
