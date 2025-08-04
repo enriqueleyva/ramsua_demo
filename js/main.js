@@ -18,3 +18,13 @@ sections.forEach((section) => {
 		duration: 0.8,
 	});
 });
+
+gsap.from("#empresa .btn", {
+	opacity: 0,
+	y: 40,
+	duration: 0.6,
+	scrollTrigger: {
+		trigger: "#historia .btn",
+		start: "top 85%",
+	},
+});

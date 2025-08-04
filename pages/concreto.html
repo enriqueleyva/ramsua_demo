@@ -1,0 +1,599 @@
+<!-- Ramsua Landing Page Mockup -->
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>RAMSUA | Ingenieros Civiles y Construcción</title>
+		<!-- Bootstrap 5 CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<!-- 1. Carga sólo los pesos que vas a usar -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<style>
+			/* Paleta corporativa rápida */
+			.text-orange {
+				color: #ff6600 !important;
+			}
+
+			/* Botón outline en naranja */
+			.btn-outline-orange {
+				border-color: #ff6600;
+				color: #ff6600;
+			}
+			.btn-outline-orange:hover,
+			.btn-outline-orange:focus {
+				background: #ff6600;
+				color: #fff;
+			}
+		</style>
+
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav
+			class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-3"
+		>
+			<div class="container">
+				<!-- <a class="navbar-brand" href="#"><span>S</span> Ramsua</a> -->
+				<img
+					class="navbar-brand"
+					src="https://ramsua.com/wp-content/uploads/2025/01/logo_ramsua.png"
+					alt=""
+				/>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navMenu"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navMenu">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="#empresa">Nosotros</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#divisiones">Divisiones</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#proyectos">Proyectos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contacto">Contacto</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section class="hero d-flex" id="hero">
+			<div class="container text-center">
+				<h1 class="hero-title mb-3">
+					40 Años de Excelencia en Ingeniería y Construcción
+				</h1>
+				<div class="divider mx-auto"></div>
+				<p class="lead mb-5">
+					Impulsando proyectos industriales, comerciales y residenciales con
+					innovación y calidad.
+				</p>
+				<a href="#empresa" class="btn btn-lg btn-light fw-semibold"
+					>Conoce Más</a
+				>
+			</div>
+		</section>
+
+		<section class="py-5">
+			<div class="container">
+				<div class="row">
+					<!-- 1️⃣ La columna se vuelve un contenedor flex centrado -->
+					<div class="col-md-12 d-flex justify-content-center">
+						<!-- 2️⃣ Imagen bloque + auto-márgen + responsive -->
+						<img
+							src="https://ramsua.com/wp-content/uploads/2025/01/crocopsain.jpg"
+							alt="Planta ProCOPSA"
+							class="d-block mx-auto img-fluid"
+							style="max-width: 25%"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- La Empresa -->
+		<section id="empresa" class="section-padding">
+			<div class="container">
+				<div class="row align-items-center gx-5">
+					<div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+						<img
+							src="https://ramsua.mx/wp-content/uploads/2025/01/28-ene-ramsua-hor-5.jpg"
+							alt="Ingeniería"
+							class="img-fluid rounded-4 shadow"
+						/>
+					</div>
+					<div class="col-lg-6 order-lg-1">
+						<h2 class="fw-bold mb-3">Concretos</h2>
+						<div class="divider"></div>
+						<p>
+							PROCOPSA nace en 2013, como una empresa 100% potosina, con el
+							propósito de ofrecer al mercado de la construcción, un conjunto de
+							soluciones en concreto premezclado que cumpla con las expectativas
+							del cliente.
+						</p>
+						<p>
+							Una de las principales razones que nos permite cumplir con nuestro
+							compromiso de entrega en tiempo con nuestros clientes, es debido a
+							que contamos con dos plantas de producción de concreto en San Luis
+							Potosí, México. Cada una de ellas equipada con laboratorio de
+							pruebas para garantizar la calidad de nuestro concreto
+							premezclado.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Carrusel Portrait -->
+		<section id="galeria" class="section-padding bg-light">
+			<div class="container">
+				<div class="row align-items-center g-5">
+					<div class="col-6">
+						<!-- Título con break + palabra clave en naranja -->
+						<h2 class="fw-bold mb-4 lh-sm">
+							Tú lo sueñas,<br />
+							<span class="text-orange">nosotros lo construimos</span>
+						</h2>
+
+						<!-- Lista con chevron naranja -->
+						<ul class="list-unstyled fs-5">
+							<li class="d-flex align-items-start mb-2">
+								<i class="bi bi-chevron-right text-orange me-2 mt-1"></i>
+								Concretos convencionales
+							</li>
+							<li class="d-flex align-items-start mb-2">
+								<i class="bi bi-chevron-right text-orange me-2 mt-1"></i>
+								Bombeo de concreto
+							</li>
+							<li class="d-flex align-items-start mb-2">
+								<i class="bi bi-chevron-right text-orange me-2 mt-1"></i>
+								Laboratorio
+							</li>
+							<li class="d-flex align-items-start mb-2">
+								<i class="bi bi-chevron-right text-orange me-2 mt-1"></i>
+								Relleno fluido
+							</li>
+							<li class="d-flex align-items-start mb-4">
+								<i class="bi bi-chevron-right text-orange me-2 mt-1"></i>
+								Asesoría
+							</li>
+						</ul>
+
+						<!-- CTA opcional -->
+						<a
+							href="https://www.procopsa.com/"
+							class="btn btn-outline-orange btn-lg px-4"
+							target="_blank"
+						>
+							Conoce nuestros servicios
+						</a>
+					</div>
+					<div class="col-6">
+						<div
+							id="carouselRamsuaPortrait"
+							class="carousel carousel-portrait slide carousel-fade shadow rounded-4 overflow-hidden mx-auto"
+							data-bs-ride="carousel"
+						>
+							<!-- Indicadores -->
+							<div class="carousel-indicators mb-0">
+								<button
+									type="button"
+									data-bs-target="#carouselRamsuaPortrait"
+									data-bs-slide-to="0"
+									class="active"
+									aria-current="true"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselRamsuaPortrait"
+									data-bs-slide-to="1"
+									aria-label="Slide 2"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselRamsuaPortrait"
+									data-bs-slide-to="2"
+									aria-label="Slide 3"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselRamsuaPortrait"
+									data-bs-slide-to="3"
+									aria-label="Slide 4"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselRamsuaPortrait"
+									data-bs-slide-to="4"
+									aria-label="Slide 5"
+								></button>
+							</div>
+
+							<!-- Slides -->
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img
+										src="https://ramsua.com/wp-content/uploads/elementor/thumbs/Copsa-Fotos_Mesa-de-trabajo-1-copia-3-r40leuhatreih3q7g7s4fv4fzgguuxu2gmboa8kvs4.jpg"
+										class="d-block w-100"
+										alt="Proyecto 1"
+									/>
+								</div>
+
+								<div class="carousel-item">
+									<img
+										src="https://ramsua.com/wp-content/uploads/elementor/thumbs/Copsa-Fotos_Mesa-de-trabajo-1-r40ley8nl3jnrjkqu9empu6aczybpq8zt4xm7cfb38.jpg"
+										class="d-block w-100"
+										alt="Proyecto 2"
+									/>
+								</div>
+
+								<div class="carousel-item">
+									<img
+										src="https://ramsua.com/wp-content/uploads/elementor/thumbs/Copsa-Fotos_Mesa-de-trabajo-1-copia-r40lewcz7fh34bnh58ldkund687lac1j4vmn8si3fo.jpg"
+										class="d-block w-100"
+										alt="Proyecto 3"
+									/>
+								</div>
+								<div class="carousel-item">
+									<img
+										src="https://ramsua.com/wp-content/uploads/elementor/thumbs/Copsa-Fotos_Mesa-de-trabajo-1-copia-4-r40levf50lfsspouaq6r0cvwkuc82mxssqz5rijhlw.jpg"
+										class="d-block w-100"
+										alt="Proyecto 4"
+									/>
+								</div>
+								<div class="carousel-item">
+									<img
+										src="https://ramsua.com/wp-content/uploads/elementor/thumbs/Copsa-Fotos_Mesa-de-trabajo-1-copia-2-r40leslmg3bxtvsxr6yvavlisoq4fjmlsd0pbono4k.jpg"
+										class="d-block w-100"
+										alt="Proyecto 5"
+									/>
+								</div>
+							</div>
+
+							<!-- Controles -->
+							<button
+								class="carousel-control-prev"
+								type="button"
+								data-bs-target="#carouselRamsuaPortrait"
+								data-bs-slide="prev"
+							>
+								<span
+									class="carousel-control-prev-icon"
+									aria-hidden="true"
+								></span>
+								<span class="visually-hidden">Anterior</span>
+							</button>
+							<button
+								class="carousel-control-next"
+								type="button"
+								data-bs-target="#carouselRamsuaPortrait"
+								data-bs-slide="next"
+							>
+								<span
+									class="carousel-control-next-icon"
+									aria-hidden="true"
+								></span>
+								<span class="visually-hidden">Siguiente</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Estilos específicos “portrait” -->
+		<style>
+			/* contenedor estrecho y centrado */
+			.carousel-portrait {
+				width: 100%;
+				max-width: 420px; /* ancho máx.; ajústalo a tu diseño */
+			}
+
+			/* alto fijo 3:4 y recorte limpio */
+			.carousel-portrait .carousel-inner,
+			.carousel-portrait .carousel-item,
+			.carousel-portrait img {
+				height: 560px; /* 420 × 4/3 = 560 → retrato */
+			}
+			.carousel-portrait img {
+				object-fit: fill;
+			}
+
+			/* indicadores naranja corporativo */
+			.carousel-portrait .carousel-indicators [data-bs-target] {
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background: #d0d0d0;
+				opacity: 1;
+			}
+			.carousel-portrait .carousel-indicators .active {
+				background: #ff6600;
+			}
+
+			/* caption con fondo suave */
+			.carousel-portrait .carousel-caption {
+				background: rgba(0, 0, 0, 0.55);
+				padding: 0.7rem 1rem;
+				border-radius: 0.5rem;
+			}
+			.carousel-portrait .carousel-indicators {
+				display: none;
+			}
+		</style>
+
+		<!-- GSAP opcional (misma lógica que antes) -->
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
+		<script>
+			gsap.utils
+				.toArray("#carouselRamsuaPortrait .carousel-caption")
+				.forEach((cap, i) => {
+					gsap.from(cap, {
+						opacity: 0,
+						y: 30,
+						duration: 0.6,
+						delay: i * 0.1,
+						scrollTrigger: {
+							trigger: "#carouselRamsuaPortrait",
+							start: "top 80%",
+						},
+					});
+				});
+		</script>
+
+		<!-- Estilos extra -->
+		<style>
+			/* Bordes y sombra ya vienen de la clase shadow/rounded-4 */
+			#carouselRamsua img {
+				object-fit: cover; /* evita deformaciones */
+				height: 480px; /* ajusta para tu layout */
+			}
+
+			/* Indicadores personalizados */
+			#carouselRamsua .carousel-indicators [data-bs-target] {
+				width: 14px;
+				height: 14px;
+				border-radius: 50%;
+				background-color: #d0d0d0;
+				opacity: 1;
+			}
+			#carouselRamsua .carousel-indicators .active {
+				background-color: #ff6600; /* naranja corporativo */
+			}
+
+			/* Suavizar caption sobre fondo oscuro/imagen */
+			#carouselRamsua .carousel-caption {
+				background: rgba(0, 0, 0, 0.55);
+				padding: 1rem 1.5rem;
+				border-radius: 0.75rem;
+			}
+		</style>
+
+		<!-- GSAP + ScrollTrigger (opcional, para animar captions al entrar) -->
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
+		<script>
+			gsap.utils
+				.toArray("#carouselRamsua .carousel-caption")
+				.forEach((cap, i) => {
+					gsap.from(cap, {
+						opacity: 0,
+						y: 30,
+						duration: 0.6,
+						delay: 0.2,
+						scrollTrigger: {
+							trigger: "#carouselRamsua",
+							start: "top 80%",
+						},
+					});
+				});
+		</script>
+
+		<style>
+			/* ——— Logo uniformado ——— */
+			.logo-empresa {
+				max-height: 80px; /* altura deseada */
+				width: auto; /* conserva proporción */
+				object-fit: contain; /* nunca se deforma */
+				transition: transform 0.25s ease;
+			}
+			.logo-empresa:hover {
+				transform: scale(1.06); /* micro-interacción */
+			}
+		</style>
+
+		<!-- ============ FOOTER ============ -->
+		<footer
+			class="footer text-white pt-5 pb-3 position-relative overflow-hidden"
+			style="background: #1d1d1d"
+		>
+			<div class="container position-relative">
+				<div class="row gy-4">
+					<!-- Identidad -->
+					<div class="col-12 col-md-4">
+						<img
+							src="img/logos/logoNaranja.png"
+							alt="RAMSUA"
+							height="50"
+							class="footer-logo mb-3"
+						/>
+						<p class="small lh-sm mb-0">
+							Impulsamos proyectos industriales desde 1998 conectando la cadena
+							de suministro más confiable de México.
+						</p>
+					</div>
+
+					<!-- Navegación -->
+					<div class="col-6 col-md-2">
+						<h6 class="text-uppercase fw-semibold small mb-2">Empresa</h6>
+						<ul class="list-unstyled small">
+							<li><a class="footer-link" href="#inicio">Inicio</a></li>
+							<li><a class="footer-link" href="#servicios">Servicios</a></li>
+							<li>
+								<a class="footer-link" href="#proveedores">Proveedores</a>
+							</li>
+							<li><a class="footer-link" href="#contacto">Contacto</a></li>
+						</ul>
+					</div>
+
+					<!-- Contacto -->
+					<div class="col-12 col-md-4">
+						<h6 class="text-uppercase fw-semibold small mb-2">Contacto</h6>
+						<p class="small mb-1">
+							<i class="bi bi-envelope me-1"></i> contacto@ramsua.com
+						</p>
+						<p class="small mb-3">
+							<i class="bi bi-telephone me-1"></i> +52 (55) 1234-5678
+						</p>
+
+						<!-- Redes -->
+						<div class="d-flex gap-3 fs-5">
+							<a class="footer-link" href="#"><i class="bi bi-linkedin"></i></a>
+							<a class="footer-link" href="#"><i class="bi bi-facebook"></i></a>
+							<a class="footer-link" href="#"><i class="bi bi-youtube"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- /.row -->
+
+				<hr class="border-secondary opacity-50 my-4" />
+
+				<div
+					class="d-flex flex-column flex-sm-row justify-content-between align-items-center small"
+				>
+					<span>&copy; 2025 RAMSUA. Todos los derechos reservados.</span>
+					<!-- <span>Diseño y desarrollo: Equipo RAMSUA</span> -->
+				</div>
+			</div>
+			<!-- /.container -->
+		</footer>
+		<!-- ========== /FOOTER =========== -->
+
+		<!-- Bootstrap Icons CDN (solo si aún no lo cargaste) -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+		/>
+
+		<style>
+			/* ——— Footer utilidades ——— */
+			.footer-link {
+				color: #ffffffcc;
+				text-decoration: none;
+				transition: color 0.2s;
+			}
+			.footer-link:hover,
+			.footer-logo:hover {
+				color: #f37021;
+			}
+			.footer-logo {
+				transition: transform 0.25s ease;
+			}
+			.footer-logo:hover {
+				transform: scale(1.05);
+			}
+		</style>
+
+		<!-- GSAP + ScrollTrigger -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+		<script>
+			/* Fade-up de columnas al entrar en viewport */
+			gsap.registerPlugin(ScrollTrigger);
+			gsap.from(".footer .row > div", {
+				opacity: 0,
+				y: 40,
+				duration: 0.6,
+				stagger: 0.15,
+				ease: "power2.out",
+				scrollTrigger: {
+					trigger: ".footer",
+					start: "top bottom-=80",
+				},
+			});
+		</script>
+
+		<!-- Bootstrap JS & dependencies -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- GSAP -->
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+		<!-- ScrollSmoother requires ScrollTrigger -->
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			gsap.registerPlugin(ScrollTrigger);
+
+			/* Parallax por logo: cuanto mayor ‘depth’, mayor desplazamiento */
+			gsap.utils.toArray(".logo").forEach((logo) => {
+				const depth = parseFloat(logo.dataset.depth || 0.2); // 0 → 1
+				const moveY = window.innerHeight * depth; // recorrido en píxeles
+
+				gsap.fromTo(
+					logo,
+					{ y: -moveY },
+					{
+						y: moveY,
+						ease: "none",
+						scrollTrigger: {
+							trigger: "#nube-clientes",
+							start: "top top",
+							end: "bottom bottom",
+							scrub: true,
+						},
+					}
+				);
+			});
+
+			gsap.utils.toArray("#valores .shadow-sm").forEach((card, i) => {
+				gsap.from(card, {
+					opacity: 0,
+					y: 40,
+					delay: i * 0.1,
+					duration: 0.6,
+					scrollTrigger: {
+						trigger: card,
+						start: "top 85%",
+					},
+				});
+			});
+
+			gsap.utils.toArray("#mision-vision article").forEach((card, i) => {
+				gsap.from(card, {
+					opacity: 0,
+					y: 50,
+					duration: 0.7,
+					delay: i * 0.1,
+					scrollTrigger: {
+						trigger: card,
+						start: "top 85%",
+					},
+				});
+			});
+		</script>
+	</body>
+</html>
