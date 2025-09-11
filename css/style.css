@@ -112,3 +112,16 @@ footer {
 	color: #fff;
 	text-decoration: none;
 }
+
+#proyectos .card-img-top {
+	width: 100%;
+	aspect-ratio: 16/9;
+	object-fit: cover;
+	object-position: center;
+}
+
+@supports not (aspect-ratio:1) {
+	#proyectos .card-img-top {
+		height: 240px;
+	}
+}
