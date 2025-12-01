@@ -113,7 +113,7 @@ footer {
 	text-decoration: none;
 }
 
-#proyectos .card-img-top {
+#proyectos1 .card-img-top {
 	width: 100%;
 	aspect-ratio: 16/9;
 	object-fit: cover;
@@ -121,7 +121,141 @@ footer {
 }
 
 @supports not (aspect-ratio:1) {
-	#proyectos .card-img-top {
+	#proyectos1 .card-img-top {
 		height: 240px;
 	}
+}
+
+
+/* ===== Galería tipo mosaico ===== */
+
+.proyectos-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-auto-rows: 150px;
+	/* altura base de cada fila */
+	gap: 16px;
+	grid-auto-flow: dense;
+	/* rellena huecos como en el ejemplo */
+}
+
+/* Tamaños de los bloques */
+.proyecto-item--big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.proyecto-item--wide {
+	grid-column: span 2;
+}
+
+.proyecto-item--tall {
+	grid-row: span 2;
+}
+
+/* Responsivo */
+@media (max-width: 1199.98px) {
+	.proyectos-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-auto-rows: 160px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.proyectos-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-auto-rows: 180px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.proyectos-grid {
+		grid-template-columns: 1fr;
+		grid-auto-rows: 220px;
+
+		/* Opcional: desactiva spans en móvil para hacerlo más simple */
+		.proyecto-item--big,
+		.proyecto-item--wide,
+		.proyecto-item--tall {
+			grid-column: span 1;
+			grid-row: span 1;
+		}
+	}
+}
+
+/* Tarjeta / imagen */
+
+.proyecto-card {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+	background-color: #111;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.proyecto-card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.45s ease;
+}
+
+.proyecto-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.proyecto-card:hover img {
+	transform: scale(1.04);
+}
+
+/* Overlay de texto */
+
+.proyecto-overlay {
+	position: absolute;
+	inset: auto 0 0 0;
+	padding: 0.75rem 1rem 1rem;
+	background: linear-gradient(to top,
+			rgba(0, 0, 0, 0.75),
+			transparent);
+	color: #fff;
+}
+
+.proyecto-overlay h5 {
+	font-size: 0.95rem;
+	margin-bottom: 0.25rem;
+	font-weight: 600;
+}
+
+.proyecto-overlay p {
+	font-size: 0.75rem;
+	margin: 0;
+	opacity: 0.9;
+}
+
+
+/* Tabs / pills de Ramsua */
+.nav-pills .nav-link {
+	color: var(--ramsua-orange);
+	/* texto naranja cuando NO está activo */
+	border-radius: 999px;
+	font-weight: 500;
+}
+
+.nav-pills .nav-link:hover {
+	color: var(--ramsua-orange);
+	/* un poquito más oscuro al hover */
+}
+
+/* Estado activo (el que ves azul en tu captura) */
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+	background-color: var(--ramsua-orange);
+	/* fondo naranja */
+	color: #fff;
+	/* texto blanco */
 }
