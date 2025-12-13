@@ -483,7 +483,7 @@
 									</button>
 								</div>
 
-								<h5 class="fw-semibold mb-2">Proyectos especiales</h5>
+								<h5 class="fw-semibold mb-2">Otros proyectos</h5>
 
 								<!-- Proyectos / Galería tipo mosaico -->
 								<section id="proyectos" class="bg-light">
@@ -832,7 +832,7 @@
 									</button>
 								</div>
 								<!-- Carrusel Varios -->
-								<h5 class="fw-semibold mb-2">Proyectos especiales</h5>
+								<h5 class="fw-semibold mb-2">Otros proyectos</h5>
 
 								<section id="mosaico-especiales" class="bg-light">
 									<div class="container">
@@ -1205,24 +1205,14 @@
 					></button>
 
 					<div class="modal-body p-0">
-						<figure class="mb-0">
-							<img
-								src=""
-								alt=""
-								id="modalGaleriaProyectosImg"
-								class="img-fluid w-100"
-							/>
-							<figcaption class="p-3 bg-dark">
-								<h5
-									class="mb-1 text-white"
-									id="modalGaleriaProyectosTitle"
-								></h5>
-								<p
-									class="mb-0 small text-white-50"
-									id="modalGaleriaProyectosDesc"
-								></p>
-							</figcaption>
-						</figure>
+						<div id="modalGaleriaProyectosContent" class="bg-black"></div>
+						<div class="p-3 bg-dark">
+							<h5 class="mb-1 text-white" id="modalGaleriaProyectosTitle"></h5>
+							<p
+								class="mb-0 small text-white-50"
+								id="modalGaleriaProyectosDesc"
+							></p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1230,16 +1220,11 @@
 
 		<script>
 			document.addEventListener("DOMContentLoaded", function () {
-				// Todas las tarjetas clicables de los mosaicos:
-				// - sección principal #proyectos
-				// - sección de proyectos especiales #mosaico-especiales
-				const cards = document.querySelectorAll(
-					"#proyectos .proyectos-grid .proyecto-card, " +
-						"#mosaico-especiales .proyectos-grid .proyecto-card"
-				);
-
+				// Modal reutilizable para ver cualquier imagen de proyectos en grande
 				const modalEl = document.getElementById("modalGaleriaProyectos");
-				const modalImg = document.getElementById("modalGaleriaProyectosImg");
+				const modalContent = document.getElementById(
+					"modalGaleriaProyectosContent"
+				);
 				const modalTitle = document.getElementById(
 					"modalGaleriaProyectosTitle"
 				);
@@ -1247,21 +1232,74 @@
 
 				const modal = new bootstrap.Modal(modalEl);
 
-				cards.forEach((card) => {
-					card.style.cursor = "pointer";
+				// Selecciona todas las imágenes de proyectos en mosaicos y carruseles
+				const projectImages = document.querySelectorAll(
+					"#proyectos .proyecto-card img, " +
+						"#mosaico-especiales .proyecto-card img, " +
+						".carousel .carousel-item img"
+				);
 
-					card.addEventListener("click", () => {
-						const img = card.querySelector("img");
-						const titleEl = card.querySelector(".proyecto-overlay h5");
-						const descEl = card.querySelector(".proyecto-overlay p");
+				const openModal = (img) => {
+					modalContent.innerHTML = "";
 
-						if (img) {
-							modalImg.src = img.src;
-							modalImg.alt = img.alt || "";
-						}
+					const sourceCarousel = img.closest(".carousel");
+					const clickedSlide = img.closest(".carousel-item");
 
-						modal.show();
-					});
+					if (sourceCarousel && clickedSlide) {
+						const clonedCarousel = sourceCarousel.cloneNode(true);
+						const originalSlides = [
+							...sourceCarousel.querySelectorAll(".carousel-item"),
+						];
+						const clickedIndex = originalSlides.indexOf(clickedSlide);
+
+						// Asigna un id único al carrusel clonado para no interferir con el original
+						const uniqueId = `${sourceCarousel.id || "carousel"}-modal`;
+						clonedCarousel.id = uniqueId;
+
+						// Reasigna los data-bs-target a este carrusel dentro del modal
+						clonedCarousel
+							.querySelectorAll("[data-bs-target]")
+							.forEach((control) => {
+								control.setAttribute("data-bs-target", `#${uniqueId}`);
+							});
+
+						// Activa el slide que corresponde a la imagen clickeada
+						[...clonedCarousel.querySelectorAll(".carousel-item")].forEach(
+							(slide, idx) => {
+								slide.classList.toggle("active", idx === clickedIndex);
+							}
+						);
+
+						modalContent.appendChild(clonedCarousel);
+
+						// Inicializa el carrusel dentro del modal
+						new bootstrap.Carousel(clonedCarousel, {
+							interval: false,
+						});
+					} else {
+						const figure = document.createElement("figure");
+						figure.className = "mb-0";
+
+						const modalImg = document.createElement("img");
+						modalImg.id = "modalGaleriaProyectosImg";
+						modalImg.className = "img-fluid w-100";
+						modalImg.src = img.src;
+						modalImg.alt = img.alt || "";
+
+						figure.appendChild(modalImg);
+						modalContent.appendChild(figure);
+					}
+
+					// Título y descripción opcionales: usa data-attributes o el alt como fallback
+					modalTitle.textContent = img.dataset.title || img.alt || "Proyecto";
+					modalDesc.textContent = img.dataset.desc || "";
+
+					modal.show();
+				};
+
+				projectImages.forEach((img) => {
+					img.style.cursor = "pointer";
+					img.addEventListener("click", () => openModal(img));
 				});
 			});
 		</script>
