@@ -282,6 +282,20 @@
 												src="../img/comercial/industrial/m57_logistik/01.webp"
 												class="d-block w-100"
 												alt="M57 LOGISTIK"
+												data-title="M57 LOGISTIK"
+												data-desc="Desarrollo de un Parque Logístico
+															con 32 unidades distribuidas en 4
+															módulos. Superficie: 24,000 m²
+															construidos y 16,000 m² de
+															vialidades y patios de maniobra.
+															Cada unidad incluye:
+															Instalaciones eléctricas e
+															hidrosanitarias individuales.
+															Rampa niveladora, andén de
+															carga y rampa de acceso
+															vehicular.
+															Altura libre de 10 m con
+															estructura de alma abierta"
 											/>
 										</div>
 										<div class="carousel-item">
@@ -353,6 +367,17 @@
 												src="../img/comercial/industrial/cedis_draexlmaier/01.webp"
 												class="d-block w-100"
 												alt="DRÄXLMAIER México"
+												data-title="DRÄXLMAIER México"
+												data-desc="Desarrollamos de manera integral
+													la ingeniería y construcción de un
+													edificio industrial de 20,000 m²,
+													incluyendo cimentación con
+													zapatas aisladas, muros de
+													contención, pisos de concreto,
+													estructura metálica, cubiertas,
+													redes contra incendio,
+													instalaciones eléctricas y áreas de
+													servicio"
 											/>
 										</div>
 										<div class="carousel-item">
@@ -425,6 +450,14 @@
 												src="../img/comercial/industrial/abm_tool_die_co/01_01.webp"
 												class="d-block w-100"
 												alt="ABM TOOL & DIE CO"
+												data-title="ABM TOOL & DIE CO"
+												data-desc="Un proyecto llave en mano en
+													coordinación con WTC Industrial
+													con especificaciones para ABM,
+													empresa canadiense dedicada a la
+													fabricación de piezas metálicas
+													troqueladas para vehículos
+													automotrices"
 											/>
 										</div>
 										<div class="carousel-item">
@@ -496,6 +529,8 @@
 														src="../img/comercial/industrial/general/01.webp"
 														alt="RAMSUA"
 														loading="lazy"
+														data-title="Complejo industrial Ramsua"
+														data-desc="Vista aérea de un proyecto industrial de gran escala desarrollado por Ramsua."
 													/>
 												</div>
 											</article>
@@ -703,6 +738,9 @@
 												src="../img/comercial/vertical_comercial/colegio_chapultepec/01.webp"
 												class="d-block w-100"
 												alt="Colegio Chapultepec"
+												data-title="Colegio Chapultepec"
+												data-desc="El colegio, cuya ingeniería y construcción corrió por cuenta de RAMSUA, cuenta con varios edificios de aulas, salón de eventos, oficinas administrativas, canchas deportivas, áreas recreativas y estacionamiento. Su fachada tiene un acabado especial de ladrillo aparente con recubrimiento que evita la acumulación de humedad.
+"
 											/>
 										</div>
 										<div class="carousel-item">
@@ -768,6 +806,9 @@
 												src="../img/comercial/vertical_comercial/medicentro_del_parque/01.webp"
 												class="d-block w-100"
 												alt="Medicentro del Parque"
+												data-title="Medicentro del Parque"
+												data-desc="Este proyecto consistió en diseñar y construir un centro médico de lujo. El proyecto definitivo contó con 2 niveles de estacionamiento, cafetería y locales comerciales en planta baja, 6 niveles de consultorios, 2 quirófanos ambulatorios y salas de recuperación.
+"
 											/>
 										</div>
 										<div class="carousel-item">
@@ -1292,8 +1333,8 @@
 
 					// Título y descripción opcionales: usa data-attributes o el alt como fallback
 					modalTitle.textContent = img.dataset.title || img.alt || "Proyecto";
-					modalDesc.textContent = img.dataset.desc || "";
-
+					modalDesc.textContent =
+						img.dataset.desc || img.alt || "Proyecto destacado de Ramsua.";
 					modal.show();
 				};
 
