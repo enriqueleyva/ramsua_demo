@@ -1245,6 +1245,8 @@
 				position: relative;
 				padding: 0;
 				background: #fff;
+				display: flex;
+				flex-direction: column;
 			}
 
 			#modalGaleriaProyectosContent {
@@ -1253,6 +1255,7 @@
 				align-items: center;
 				background: #fff;
 				padding: 16px;
+				width: 100%;
 			}
 
 			#modalGaleriaProyectosContent .carousel,
@@ -1271,18 +1274,15 @@
 			}
 
 			#modalGaleriaProyectos .modal-caption-overlay {
-				position: absolute;
+				position: static;
 				inset: 0 0 auto 0;
 				padding: 16px 20px 12px;
 				--modal-caption-title-size: clamp(1.5rem, 1vw + 0.9rem, 1.25rem);
 				--modal-caption-desc-size: clamp(1.3rem, 0.8vw + 0.75rem, 1rem);
-				background: linear-gradient(
-					180deg,
-					rgba(255, 255, 255, 0.95) 0%,
-					rgba(255, 255, 255, 0.65) 100%
-				);
+				background: #fff;
 				color: #000;
 				z-index: 2;
+				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 			}
 
 			#modalGaleriaProyectos .modal-caption-overlay h5 {
