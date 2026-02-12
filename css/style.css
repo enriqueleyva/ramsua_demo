@@ -33,7 +33,8 @@ body {
 	background: linear-gradient(135deg,
 			rgba(0, 0, 0, 0.55),
 			rgba(0, 0, 0, 0.55)),
-		url("https://ramsua.mx/wp-content/uploads/2025/01/28-ene-ramsua-hor-6.jpg");
+		/* url("https://ramsua.mx/wp-content/uploads/2025/01/28-ene-ramsua-hor-6.jpg"); */
+		url("../img/bg.png");
 	background-size: cover;
 	background-position: center;
 	min-height: 100vh;
